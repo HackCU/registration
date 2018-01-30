@@ -7,7 +7,7 @@
 body {
     background: #22292c; /*linear-gradient(#020913 0%, #00121E 19%, #001F3A 28%, #063651 56%, #2B546B 71%, #827C6C 100%) no-repeat center center fixed;*/
     background-size: cover;
-    font-family: 'Biko', sans-serif;
+    font-family: 'Roboto', Helvetica, sans-serif;
     font-size: 15px;
 }
 
@@ -28,6 +28,26 @@ h4,
 h5,
 h6 {
     color: #1a8a58;
+    font-family: 'Biko', sans-serif;
+}
+
+a {
+    color: #1a8a58;
+}
+
+.btn-primary {
+    background-color: #1a8a58;
+    border-color: #1a8a58;
+}
+
+
+a:hover, a:active, a:focus {
+    color: #14643d;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus{
+    background-color: #14643d;
+    border-color: #14643d;
 }
 
 .footer {
