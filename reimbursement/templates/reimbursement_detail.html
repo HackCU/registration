@@ -20,10 +20,7 @@
             </a>
 
             <dl class="dl-horizontal">
-                <dt>
                 <h3>Personal</h3>
-                </dt>
-                <dd></dd>
                 {% include 'include/field.html' with desc='Full name' value=reimb.hacker.name %}
                 {% include 'include/field.html' with desc='Email' value=reimb.hacker.email %}
                 {% include 'include/field.html' with desc='Last update' value=reimb.update_time|naturaltime %}
@@ -31,10 +28,7 @@
                 {% include 'include/field.html' with desc='Country' value=reimb.origin_country %}
                 {% include 'include/field.html' with desc='City' value=reimb.origin %}
                 <hr>
-                <dt>
                 <h3>Receipt</h3>
-                </dt>
-                <dd></dd>
                 {% if reimb.receipt %}
                     {% include 'include/field.html' with desc='Receipt' value='<a href="'|add:reimb.receipt.url|add:'" target="_blank">'|add:reimb.receipt.name|add:"</a>"|safe %}
                 {% endif %}
@@ -42,16 +36,12 @@
                 {% include 'include/field.html' with desc='Other hackers covered' value=reimb.friend_emails %}
                 {% include 'include/field.html' with desc='Maximum assignable' value=reimb.max_assignable_money|floatformat:2 %}
 
-                {% if reimb.is_accepted %}
-                    <hr>
-                    <dt>
-                    <h3>Sending the monies</h3>
-                    </dt>
-                    <dd></dd>
-                    {% include 'include/field.html' with desc='Reimbursement money' value=reimb.reimbursement_money|floatformat:2 %}
-                    {% include 'include/field.html' with desc='PayPal email' value=reimb.paypal_email %}
-                    {% include 'include/field.html' with desc='Venmo user' value=reimb.venmo_user %}
-                {% endif %}
+                <hr>
+                <h3>Sending the monies</h3>
+                {% include 'include/field.html' with desc='Reimbursement money' value=reimb.reimbursement_money|floatformat:2 %}
+                {% include 'include/field.html' with desc='PayPal email' value=reimb.paypal_email %}
+                {% include 'include/field.html' with desc='Address' value=reimb.address %}
+                {% include 'include/field.html' with desc='Venmo user' value=reimb.venmo_user %}
             </dl>
         </div>
 

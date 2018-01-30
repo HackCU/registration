@@ -11,6 +11,7 @@ class ReceiptSubmissionReceipt(BetterModelForm):
     def __init__(self, *args, **kwargs):
         super(ReceiptSubmissionReceipt, self).__init__(*args, **kwargs)
         self.fields['receipt'].required = True
+        self.fields['address'].required = True
 
     def clean_friend_emails(self):
         multipl_hacks = self.cleaned_data.get('friend_emails', '')
@@ -18,7 +19,7 @@ class ReceiptSubmissionReceipt(BetterModelForm):
             try:
                 check_friend_emails(multipl_hacks, self.instance.hacker.email)
             except Exception as e:
-                raise forms.ValidationError(e.message)
+                raise forms.ValidationError(str(e))
         return multipl_hacks
 
     def clean_paypal_email(self):
@@ -46,11 +47,11 @@ class ReceiptSubmissionReceipt(BetterModelForm):
     class Meta:
         model = Reimbursement
         fields = (
-            'venmo_user', 'paypal_email', 'receipt', 'multiple_hackers', 'friend_emails', 'origin',)
+            'address', 'receipt', 'multiple_hackers', 'friend_emails', 'origin',)
         fieldsets = (
             ('Upload your receipt',
              {'fields': ('receipt', 'multiple_hackers', 'friend_emails'), }),
-            ('Where should we send you the monies?', {'fields': ('venmo_user', 'paypal_email',), }),
+            ('Where should we send you the monies?', {'fields': ('address',), }),
             ('Where are you joining us from?', {'fields': ('origin',), }),
         )
         widgets = {
@@ -63,7 +64,11 @@ class ReceiptSubmissionReceipt(BetterModelForm):
         }
 
         help_texts = {
-            'friend_emails': 'Comma separated, use emails your friends used to register'
+            'friend_emails': 'Comma separated, use emails your friends used to register',
+            'address': 'Where should we send you the reimbursement check to? Make sure to include country as well!',
+            'receipt': 'It should include: 1) date of the purchase 2) your name, '
+                       '3) detailed price  4) proof of payment for the purchase '
+                       '(i.e. a reference to a debit/credit card such as Visa 1234)'
         }
 
 
