@@ -3,9 +3,9 @@ import os
 
 from django.utils import timezone
 
-HACKATHON_NAME = 'HackCU'
+HACKATHON_NAME = 'Phase'
 # What's the name for the application
-HACKATHON_APPLICATION_NAME = 'HackCU registration'
+HACKATHON_APPLICATION_NAME = 'Phase registration'
 # Hackathon timezone
 TIME_ZONE = 'MST'
 # This description will be used on the html and sharing meta tags
@@ -20,7 +20,7 @@ HACKATHON_DOMAIN = os.environ.get('DOMAIN', 'localhost:8000')
 # Hackathon contact email: where should all hackers contact you. It will also be used as a sender for all emails
 HACKATHON_CONTACT_EMAIL = 'contact@hackcu.org'
 # Hackathon logo url, will be used on all emails
-HACKATHON_LOGO_URL = 'https://hackcu.org/assets/images/white_logo_full.png'
+HACKATHON_LOGO_URL = 'https://phase.hackcu.org/assets/images/smithchart.png'
 
 HACKATHON_OG_IMAGE = 'https://hackcu.org/assets/images/ogimage870x450.png'
 # (OPTIONAL) Track visits on your website
@@ -33,14 +33,14 @@ HACKATHON_FACEBOOK_PAGE = 'hackcu'
 HACKATHON_GITHUB_REPO = 'https://github.com/hackcu/registration/'
 
 # (OPTIONAL) Applications deadline
-HACKATHON_APP_DEADLINE = timezone.datetime(2018, 2, 23, 20, 0, tzinfo=timezone.pytz.timezone(TIME_ZONE))
+HACKATHON_APP_DEADLINE = timezone.datetime(2018, 11, 9, 23, 59, tzinfo=timezone.pytz.timezone(TIME_ZONE))
 # (OPTIONAL) When to arrive at the hackathon
-HACKATHON_ARRIVE = 'Registration opens at 8:00 AM and closes at 10:00 AM on Saturday February 24th, ' \
-                   'the opening ceremony will be at 10:00 AM.'
+HACKATHON_ARRIVE = 'Registration opens at 7:00 AM and closes at 8:00 AM on Saturday November 10th, ' \
+                   'the opening ceremony will be at 8:00 AM.'
 
 # (OPTIONAL) When to arrive at the hackathon
-HACKATHON_LEAVE = 'Closing ceremony will be held on Sunday February 25th from 3:00 PM to 4:00 PM. ' \
-                  'However the projects demo fair will be held in the morning from 12:30 AM to 2:30 PM.'
+HACKATHON_LEAVE = 'Closing ceremony will be held on Sunday February 11th from 1:30 AM to 2:30 AM. ' \
+                  'However the projects demo fair will be held in the night from 12:30 PM to 1:30 AM.'
 # (OPTIONAL) Hackathon live page
 # HACKATHON_LIVE_PAGE = 'https://gerard.space/live'
 
@@ -50,15 +50,15 @@ REGEX_HACKATHON_ORGANIZER_EMAIL = '^.*@hackcu\.org$'
 HACKATHON_DEV_EMAILS = ['devs@hackcu.org', ]
 
 # Reimbursement configuration
-REIMBURSEMENT_ENABLED = True
-CURRENCY = '$'
-REIMBURSEMENT_EXPIRY_DAYS = 5
-REIMBURSEMENT_REQUIREMENTS = 'You have to submit a project and demo it during the event in order to get reimbursed'
-REIMBURSEMENT_DEADLINE = timezone.datetime(2018, 1, 28, 0, 1, tzinfo=timezone.pytz.timezone(TIME_ZONE))
+REIMBURSEMENT_ENABLED = False
+# CURRENCY = '$'
+# REIMBURSEMENT_EXPIRY_DAYS = 5
+# REIMBURSEMENT_REQUIREMENTS = 'You have to submit a project and demo it during the event in order to get reimbursed'
+# REIMBURSEMENT_DEADLINE = timezone.datetime(2018, 1, 28, 0, 1, tzinfo=timezone.pytz.timezone(TIME_ZONE))
 
 # (OPTIONAL) Max team members. Defaults to 4
-TEAMS_ENABLED = True
-HACKATHON_MAX_TEAMMATES = 4
+TEAMS_ENABLED = False
+# HACKATHON_MAX_TEAMMATES = 4
 
 # (OPTIONAL) Slack credentials
 # Highly recommended to create a separate user account to extract the token from
