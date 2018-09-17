@@ -61,7 +61,7 @@ TEAMS_ENABLED = False
 # HACKATHON_MAX_TEAMMATES = 4
 
 # (OPTIONAL) Code of conduct link
-# CODE_CONDUCT_LINK = "https://pages.hackcu.org/code_conduct/"
+CODE_CONDUCT_LINK = "https://pages.hackcu.org/code_conduct/"
 
 # (OPTIONAL) Slack credentials
 # Highly recommended to create a separate user account to extract the token from
