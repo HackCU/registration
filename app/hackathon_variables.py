@@ -22,7 +22,7 @@ HACKATHON_CONTACT_EMAIL = 'contact@hackcu.org'
 # Hackathon logo url, will be used on all emails
 HACKATHON_LOGO_URL = 'https://phase.hackcu.org/assets/images/smithchart.png'
 
-HACKATHON_OG_IMAGE = 'https://hackcu.org/assets/images/ogimage870x450.png'
+HACKATHON_OG_IMAGE = 'https://phase.hackcu.org/assets/images/ogimage870x450.png'
 # (OPTIONAL) Track visits on your website
 HACKATHON_GOOGLE_ANALYTICS = 'UA-111579742-1'
 # (OPTIONAL) Hackathon twitter user
@@ -39,10 +39,10 @@ HACKATHON_ARRIVE = 'Registration opens at 7:00 AM and closes at 8:00 AM on Satur
                    'the opening ceremony will be at 8:00 AM.'
 
 # (OPTIONAL) When to arrive at the hackathon
-HACKATHON_LEAVE = 'Closing ceremony will be held on Sunday February 11th from 1:30 AM to 2:30 AM. ' \
-                  'However the projects demo fair will be held in the night from 12:30 PM to 1:30 AM.'
+HACKATHON_LEAVE = 'Closing ceremony will be held on Sunday November 11th from 12:00 AM to 1:00 AM. ' \
+                  'However the projects demo fair will be held in the night from 11:30 PM to midnight.'
 # (OPTIONAL) Hackathon live page
-# HACKATHON_LIVE_PAGE = 'https://gerard.space/live'
+HACKATHON_LIVE_PAGE = 'https://live.hackcu.org'
 
 # (OPTIONAL) Regex to automatically match organizers emails and set them as organizers when signing up
 REGEX_HACKATHON_ORGANIZER_EMAIL = '^.*@hackcu\.org$'
