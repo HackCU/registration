@@ -77,8 +77,8 @@ LOGGED_IN_COOKIE_DOMAIN = '.hackcu.org'
 LOGGED_IN_COOKIE_KEY = 'hackcu_logged_in'
 
 # Hardware configuration
-HARDWARE_ENABLED = False
+HARDWARE_ENABLED = True
 # Hardware request time length (in minutes)
-HARDWARE_REQUEST_TIME = 15
+HARDWARE_REQUEST_TIME = 5
 # Can Hackers start a request on the hardware lab?
-# HACKERS_CAN_REQUEST = False
+HACKERS_CAN_REQUEST = False
