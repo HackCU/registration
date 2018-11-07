@@ -75,3 +75,8 @@ SLACK = {
 # This allows to store an extra cookie in the browser to be shared with other application on the same domain
 LOGGED_IN_COOKIE_DOMAIN = '.hackcu.org'
 LOGGED_IN_COOKIE_KEY = 'hackcu_logged_in'
+
+# Hardware configuration
+HARDWARE_ENABLED = False
+#Hardware request time length (in minutes)
+HARDWARE_REQUEST_TIME = 15
