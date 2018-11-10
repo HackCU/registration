@@ -81,4 +81,4 @@ HARDWARE_ENABLED = True
 # Hardware request time length (in minutes)
 HARDWARE_REQUEST_TIME = 5
 # Can Hackers start a request on the hardware lab?
-HACKERS_CAN_REQUEST = False
+HACKERS_CAN_REQUEST = True
