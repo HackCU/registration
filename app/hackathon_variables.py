@@ -35,7 +35,7 @@ HACKATHON_INSTAGRAM_PROFILE = 'hackcu'
 HACKATHON_GITHUB_REPO = 'https://github.com/hackcu/registration/'
 
 # (OPTIONAL) Applications deadline
-HACKATHON_APP_DEADLINE = timezone.datetime(2018, 11, 10, 23, 59, tzinfo=timezone.pytz.timezone(TIME_ZONE))
+HACKATHON_APP_DEADLINE = timezone.datetime(2019, 2, 10, 23, 59, tzinfo=timezone.pytz.timezone(TIME_ZONE))
 # (OPTIONAL) When to arrive at the hackathon
 HACKATHON_ARRIVE = 'Registration opens at 8:00 AM and closes at 10:00 AM on Saturday February 23rd, ' \
                    'the opening ceremony will be at 11:00 pm.'
