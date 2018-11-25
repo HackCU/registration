@@ -162,6 +162,11 @@
                         <i aria-hidden="true" class="fa fa-twitter fa-lg"></i>
                     </a>
                 {% endif %}
+                {% if h_instagram %}
+                    <a class="btns" target="_blank" href="https://instagram.com/{{ h_instagram }}">
+                        <i aria-hidden="true" class="fa fa-instagram fa-lg"></i>
+                    </a>
+                {% endif %}
                 {% if h_fb %}
                     <a class="btns" target="_blank" href="https://fb.com/{{ h_fb }}">
                         <i aria-hidden="true" class="fa fa-facebook fa-lg"></i>
@@ -172,7 +177,6 @@
                         <i aria-hidden="true" class="fa fa-envelope-o fa-lg"></i>
                     </a>
                 {% endif %}
-
                 {% if h_repo %}
                     <a class="btns" target="_blank" href="{{ h_repo }}">
                         <i aria-hidden="true" class="fa fa-github fa-lg"></i>

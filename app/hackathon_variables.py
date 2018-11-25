@@ -29,6 +29,8 @@ HACKATHON_GOOGLE_ANALYTICS = 'UA-111579742-1'
 HACKATHON_TWITTER_ACCOUNT = 'hackcu'
 # (OPTIONAL) Hackathon Facebook page
 HACKATHON_FACEBOOK_PAGE = 'hackcu'
+# (OPTIONAL) Hackathon Instagram profile
+HACKATHON_INSTAGRAM_PROFILE = 'hackcu'
 # (OPTIONAL) Github Repo for this project (so meta)
 HACKATHON_GITHUB_REPO = 'https://github.com/hackcu/registration/'
 

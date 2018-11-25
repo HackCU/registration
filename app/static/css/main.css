@@ -5,7 +5,7 @@
 
 
 body {
-    background: #f8f8f8; /*linear-gradient(#020913 0%, #00121E 19%, #001F3A 28%, #063651 56%, #2B546B 71%, #827C6C 100%) no-repeat center center fixed;*/
+    background: #22292c; /*linear-gradient(#020913 0%, #00121E 19%, #001F3A 28%, #063651 56%, #2B546B 71%, #827C6C 100%) no-repeat center center fixed;*/
     background-size: cover;
     font-family: 'Roboto', Helvetica, sans-serif;
     font-size: 15px;
@@ -145,31 +145,25 @@ nav.navbar {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-.navbar-nav > li > a {
+.navbar-nav > li > a, .navbar-nav > li > a:focus, .navbar-nav > li > a:active {
+    color: #e5e5e5;
     background-color: #0F89ED;
-    color: #e5e5e5;
+    opacity: 1;
 }
 
-.navbar-nav > li > a:hover {
+.navbar-nav > li > a:hover{
     background-color: #0f82e5;
-    color: #e5e5e5;
+    color: #ffffff;
+    opacity: 1;
 }
-
-
 
 .navbar-nav > li.active > a {
     background-color: #0f73cb;
     color: #e5e5e5;
 }
 
-.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:active {
-    color: #e5e5e5;
-    opacity: 1;
-}
-
-.navbar-default .navbar-nav > li > a:hover{
-    color: #ffffff;
-    opacity: 1;
+.navbar-toggle .icon-bar {
+    background-color: #e5e5e5;
 }
 
 div.panel {

@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.views.generic import RedirectView
+from django.views.generic import RedirectView, TemplateView
 
 from app import views
 
@@ -18,7 +18,7 @@ urlpatterns = [
     url(r'^checkin/', include('checkin.urls')),
     url(r'^teams/', include('teams.urls')),
     url(r'^stats/', include('stats.urls')),
-    url(r'code_conduct/$', views.code_conduct, name='code_conduct'),
+    url(r'^code_conduct/$', views.code_conduct, name='code_conduct'),
 
 ]
 
@@ -29,4 +29,8 @@ if settings.HARDWARE_ENABLED:
     urlpatterns.append(url(r'^hardware/', include('hardware.urls')))
 
 if settings.DEBUG:
+    urlpatterns.append(
+        url(r'^email/$', TemplateView.as_view(template_name='test_email/test_message.html'), name='test_email')
+    )
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
