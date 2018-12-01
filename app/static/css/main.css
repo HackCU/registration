@@ -27,27 +27,27 @@ h3,
 h4,
 h5,
 h6 {
-    color: #1a8a58;
+    color: #0F89ED;
     font-family: 'Biko', sans-serif;
 }
 
 a {
-    color: #1a8a58;
+    color: #0F89ED;
 }
 
 .btn-primary {
-    background-color: #1a8a58;
-    border-color: #1a8a58;
+    background-color: #0F89ED;
+    border-color: #0F89ED;
 }
 
 
 a:hover, a:active, a:focus {
-    color: #14643d;
+    color: #073F6E;
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus{
-    background-color: #14643d;
-    border-color: #14643d;
+    background-color: #073F6E;
+    border-color: #073F6E;
 }
 
 .footer {
@@ -58,7 +58,7 @@ a:hover, a:active, a:focus {
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 105px;
-    background-color: #f8f8f8;
+    background-color: #0F89ED;
     border-color: #e7e7e7;
 
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -101,12 +101,12 @@ a:hover, a:active, a:focus {
 /*}*/
 
 footer p, footer small {
-    color: #777;
+    color: #f9f9f9;
     opacity: 0.5;
 }
 
 footer p > a {
-    color: #4b4b4b;
+    color: #e7e7e7;
     opacity: 1;
 }
 
@@ -116,16 +116,16 @@ footer .row {
 
 footer a, footer a:focus, footer a:active {
     opacity: 0.5;
-    color: #777;
+    color: #e5e5e5;
     -webkit-transition: all .1s linear;
     -moz-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;
 }
 
-footer a:hover {
+footer a:hover, footer p > a:hover{
     opacity: 0.9;
-    color: #4b4b4b;
+    color: #ffffff;
 }
 
 .social-icons > a {
@@ -139,9 +139,31 @@ footer a:hover {
 }
 
 nav.navbar {
+    background-color: #0F89ED;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-nav > li > a, .navbar-nav > li > a:focus, .navbar-nav > li > a:active {
+    color: #e5e5e5;
+    background-color: #0F89ED;
+    opacity: 1;
+}
+
+.navbar-nav > li > a:hover{
+    background-color: #0f82e5;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.navbar-nav > li.active > a {
+    background-color: #0f73cb;
+    color: #e5e5e5;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #e5e5e5;
 }
 
 div.panel {

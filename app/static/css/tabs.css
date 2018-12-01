@@ -10,7 +10,6 @@
     z-index: -1;
     font-size: 17px;
     color: black;
-    border: 1px solid #838383;
     border-bottom: 0;
     padding-left: 30px;
     padding-right: 30px;
@@ -25,7 +24,6 @@
     -moz-border-radius: 0;
     border-radius: 0;
     background: #d4d1d1;
-    border: 1px solid #838383;
     border-bottom: 0;
 }
 

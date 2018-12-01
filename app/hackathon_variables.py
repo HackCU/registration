@@ -3,9 +3,9 @@ import os
 
 from django.utils import timezone
 
-HACKATHON_NAME = 'Phase'
+HACKATHON_NAME = 'HackCU'
 # What's the name for the application
-HACKATHON_APPLICATION_NAME = 'Phase registration'
+HACKATHON_APPLICATION_NAME = 'HackCU registration'
 # Hackathon timezone
 TIME_ZONE = 'MST'
 # This description will be used on the html and sharing meta tags
@@ -20,27 +20,29 @@ HACKATHON_DOMAIN = os.environ.get('DOMAIN', 'localhost:8000')
 # Hackathon contact email: where should all hackers contact you. It will also be used as a sender for all emails
 HACKATHON_CONTACT_EMAIL = 'contact@hackcu.org'
 # Hackathon logo url, will be used on all emails
-HACKATHON_LOGO_URL = 'https://phase.hackcu.org/assets/images/smithchart.png'
+HACKATHON_LOGO_URL = 'https://hackcu.org/assets/images/white_logo_full.png'
 
-HACKATHON_OG_IMAGE = 'https://phase.hackcu.org/assets/images/ogimage870x450.png'
+HACKATHON_OG_IMAGE = 'https://hackcu.org/assets/images/ogimage870x450.png'
 # (OPTIONAL) Track visits on your website
 HACKATHON_GOOGLE_ANALYTICS = 'UA-111579742-1'
 # (OPTIONAL) Hackathon twitter user
 HACKATHON_TWITTER_ACCOUNT = 'hackcu'
 # (OPTIONAL) Hackathon Facebook page
 HACKATHON_FACEBOOK_PAGE = 'hackcu'
+# (OPTIONAL) Hackathon Instagram profile
+HACKATHON_INSTAGRAM_PROFILE = 'hackcu'
 # (OPTIONAL) Github Repo for this project (so meta)
 HACKATHON_GITHUB_REPO = 'https://github.com/hackcu/registration/'
 
 # (OPTIONAL) Applications deadline
-HACKATHON_APP_DEADLINE = timezone.datetime(2018, 11, 10, 23, 59, tzinfo=timezone.pytz.timezone(TIME_ZONE))
+HACKATHON_APP_DEADLINE = timezone.datetime(2019, 2, 10, 23, 59, tzinfo=timezone.pytz.timezone(TIME_ZONE))
 # (OPTIONAL) When to arrive at the hackathon
-HACKATHON_ARRIVE = 'Registration opens at 7:00 AM and closes at 8:00 AM on Saturday November 10th, ' \
-                   'the opening ceremony will be at 8:00 AM.'
+HACKATHON_ARRIVE = 'Registration opens at 8:00 AM and closes at 10:00 AM on Saturday February 23rd, ' \
+                   'the opening ceremony will be at 11:00 pm.'
 
 # (OPTIONAL) When to arrive at the hackathon
-HACKATHON_LEAVE = 'Closing ceremony will be held on Sunday November 11th from 12:00 AM to 1:00 AM. ' \
-                  'However the projects demo fair will be held in the night from 11:30 PM to midnight.'
+HACKATHON_LEAVE = 'Closing ceremony will be held on Sunday February 24th from 2:30 PM to 4:30 PM. ' \
+                  'However the projects demo fair will be held in the morning from 12:00 AM to 2 PM.'
 # (OPTIONAL) Hackathon live page
 HACKATHON_LIVE_PAGE = 'https://live.hackcu.org'
 
@@ -50,15 +52,15 @@ REGEX_HACKATHON_ORGANIZER_EMAIL = '^.*@hackcu\.org$'
 HACKATHON_DEV_EMAILS = ['devs@hackcu.org', ]
 
 # Reimbursement configuration
-REIMBURSEMENT_ENABLED = False
-# CURRENCY = '$'
-# REIMBURSEMENT_EXPIRY_DAYS = 5
-# REIMBURSEMENT_REQUIREMENTS = 'You have to submit a project and demo it during the event in order to get reimbursed'
-# REIMBURSEMENT_DEADLINE = timezone.datetime(2018, 1, 28, 0, 1, tzinfo=timezone.pytz.timezone(TIME_ZONE))
+REIMBURSEMENT_ENABLED = True
+CURRENCY = '$'
+REIMBURSEMENT_EXPIRY_DAYS = 5
+REIMBURSEMENT_REQUIREMENTS = 'You have to submit a project and demo it during the event in order to get reimbursed'
+REIMBURSEMENT_DEADLINE = timezone.datetime(2019, 1, 27, 23, 59, tzinfo=timezone.pytz.timezone(TIME_ZONE))
 
 # (OPTIONAL) Max team members. Defaults to 4
-TEAMS_ENABLED = False
-# HACKATHON_MAX_TEAMMATES = 4
+TEAMS_ENABLED = True
+HACKATHON_MAX_TEAMMATES = 4
 
 # (OPTIONAL) Code of conduct link
 CODE_CONDUCT_LINK = "https://pages.hackcu.org/code_conduct/"
@@ -77,8 +79,8 @@ LOGGED_IN_COOKIE_DOMAIN = '.hackcu.org'
 LOGGED_IN_COOKIE_KEY = 'hackcu_logged_in'
 
 # Hardware configuration
-HARDWARE_ENABLED = True
+HARDWARE_ENABLED = False
 # Hardware request time length (in minutes)
-HARDWARE_REQUEST_TIME = 10
+# HARDWARE_REQUEST_TIME = 10
 # Can Hackers start a request on the hardware lab?
-HACKERS_CAN_REQUEST = True
+# HACKERS_CAN_REQUEST = True
