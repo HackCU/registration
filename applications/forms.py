@@ -51,14 +51,14 @@ class ApplicationForm(OverwriteOnlyModelFormMixin, BetterModelForm):
         widget=forms.RadioSelect
     )
 
-    under_age = forms.TypedChoiceField(
-        required=True,
-        label='How old are you?',
-        initial=False,
-        coerce=lambda x: x == 'True',
-        choices=((False, '18 or over'), (True, 'Under 18')),
-        widget=forms.RadioSelect
-    )
+    # under_age = forms.TypedChoiceField(
+    #     required=True,
+    #     label='How old are you?',
+    #     initial=False,
+    #     coerce=lambda x: x == 'True',
+    #     choices=((False, '18 or over'), (True, 'Under 18')),
+    #     widget=forms.RadioSelect
+    # )
 
     code_conduct = forms.BooleanField(required=False,
                                       label='I have read and accept '
@@ -171,8 +171,10 @@ class ApplicationForm(OverwriteOnlyModelFormMixin, BetterModelForm):
             ('Personal Info',
              {'fields': ('university', 'degree', 'graduation_year', 'gender',
                          'phone_number', 'tshirt_size', 'diet', 'other_diet',
-                         'under_age', 'lennyface'),
-              'description': 'Hey there, before we begin we would like to know a little more about you.', }),
+                          'lennyface'),
+              'description': 'Hey there, before we begin we would like to know a little more about you. '
+                             '<b>Unfortunately, '
+                             'due to University policy we can only accept hackers 18+ years old.</b>', }),
             ('Hackathons?', {'fields': ('description', 'first_timer', 'projects'), }),
             ('Show us what you\'ve built',
              {'fields': ('github', 'devpost', 'linkedin', 'site', 'resume'),
