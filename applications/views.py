@@ -136,6 +136,7 @@ class HackerDashboard(LoginRequiredMixin, TabsView):
             form = forms.ApplicationForm(request.POST, request.FILES)
         if form.is_valid():
             application = form.save(commit=False)
+            application.under_age = False
             application.user = request.user
             application.save()
             if new_application:

@@ -249,4 +249,4 @@ class ApplicationForm(OverwriteOnlyModelFormMixin, BetterModelForm):
 
         }
 
-        exclude = ['user', 'uuid', 'invited_by', 'submission_date', 'status_update_date', 'status', ]
+        exclude = ['user', 'uuid', 'invited_by', 'submission_date', 'status_update_date', 'status', 'under_age']
