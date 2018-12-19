@@ -287,7 +287,7 @@ class Application(models.Model):
 
 
 class DraftApplication(models.Model):
-    content = models.CharField(max_length=4000)
+    content = models.CharField(max_length=7000)
     user = models.OneToOneField(User, primary_key=True)
 
     def save_dict(self, d):
