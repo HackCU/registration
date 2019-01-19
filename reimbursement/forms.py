@@ -50,7 +50,7 @@ class ReceiptSubmissionReceipt(BetterModelForm):
         fieldsets = (
             ('Upload your receipt',
              {'fields': ('receipt', 'multiple_hackers', 'friend_emails'), }),
-            ('Where should we send you the monies?', {'fields': ('address',), }),
+            ('Where should we send you the monies?', {'fields': ('venmo_user', 'paypal_email'), }),
             ('Where are you joining us from?', {'fields': ('origin',), }),
         )
         widgets = {
