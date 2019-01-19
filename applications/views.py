@@ -30,9 +30,9 @@ def check_application_exists(user, uuid):
         raise Http404
 
 
-class ConfirmApplication(UserPassesTestMixin, View):
+class ConfirmApplication(IsHackerMixin, UserPassesTestMixin, View):
     def test_func(self):
-        if not IsHackerMixin().test_func():
+        if not self.request.user.is_authenticated:
             return False
         check_application_exists(self.request.user, self.kwargs.get('id', None))
         return True

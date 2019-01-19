@@ -11,7 +11,6 @@ class ReceiptSubmissionReceipt(BetterModelForm):
     def __init__(self, *args, **kwargs):
         super(ReceiptSubmissionReceipt, self).__init__(*args, **kwargs)
         self.fields['receipt'].required = True
-        self.fields['address'].required = True
 
     def clean_friend_emails(self):
         multipl_hacks = self.cleaned_data.get('friend_emails', '')
@@ -47,7 +46,7 @@ class ReceiptSubmissionReceipt(BetterModelForm):
     class Meta:
         model = Reimbursement
         fields = (
-            'address', 'receipt', 'multiple_hackers', 'friend_emails', 'origin',)
+            'venmo_user', 'paypal_email', 'receipt', 'multiple_hackers', 'friend_emails', 'origin',)
         fieldsets = (
             ('Upload your receipt',
              {'fields': ('receipt', 'multiple_hackers', 'friend_emails'), }),
