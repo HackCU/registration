@@ -62,6 +62,8 @@ class CancelApplication(IsHackerMixin, UserPassesTestMixin, TabsView):
     template_name = 'cancel.html'
 
     def test_func(self):
+        if not self.request.user.is_authenticated:
+            return False
         check_application_exists(self.request.user, self.kwargs.get('id', None))
         return True
 
