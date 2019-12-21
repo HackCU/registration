@@ -21,8 +21,7 @@ class ApplicationForm(OverwriteOnlyModelFormMixin, BetterModelForm):
                'placeholder': 'https://www.linkedin.com/in/john_biene'}))
     site = forms.CharField(required=False, widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': 'https://biene.space'}))
-    phone_number = forms.CharField(required=False, widget=forms.TextInput(
-        attrs={'class': 'form-control', 'placeholder': '+#########'}))
+    
     university = forms.CharField(required=True,
                                  label='What university do you study at?',
                                  help_text='Current or most recent school you attended.',
@@ -170,15 +169,14 @@ class ApplicationForm(OverwriteOnlyModelFormMixin, BetterModelForm):
         self._fieldsets = [
             ('Personal Info',
              {'fields': ('university', 'degree', 'graduation_year', 'gender',
-                         'phone_number', 'tshirt_size', 'diet', 'other_diet',
-                          'lennyface'),
+                          'tshirt_size', 'diet', 'other_diet'),
               'description': 'Hey there, before we begin we would like to know a little more about you. '
                              '<b>Unfortunately, '
-                             'due to University policy we can only accept hackers 18+ years old.</b>', }),
+                             'due to University policy, we can only accept hackers 18+ years old.</b>', }),
             ('Hackathons?', {'fields': ('description', 'first_timer', 'projects'), }),
             ('Show us what you\'ve built',
              {'fields': ('github', 'devpost', 'linkedin', 'site', 'resume'),
-              'description': 'Some of our sponsors may use this information for recruitment purposes,'
+              'description': 'Some of our sponsors may use this information for recruitment purposes, '
               'so please include as much as you can.'}),
         ]
         deadline = getattr(settings, 'REIMBURSEMENT_DEADLINE', False)
@@ -219,8 +217,7 @@ class ApplicationForm(OverwriteOnlyModelFormMixin, BetterModelForm):
                                'you graduate',
             'degree': 'What\'s your major?',
             'other_diet': 'Please fill here in your dietary requirements. We want to make sure we have food for you!',
-            'lennyface': 'tip: you can chose from here <a href="http://textsmili.es/" target="_blank">'
-                         ' http://textsmili.es/</a>',
+            
             'projects': 'You can talk about about past hackathons, personal projects, awards etc. '
                         '(we love links) Show us your passion! :D',
             'reimb_amount': 'We try our best to cover costs for all hackers, but our budget is limited'
@@ -238,7 +235,6 @@ class ApplicationForm(OverwriteOnlyModelFormMixin, BetterModelForm):
             'graduation_year': 'What year will you graduate?',
             'tshirt_size': 'What\'s your t-shirt size?',
             'diet': 'Dietary requirements',
-            'lennyface': 'Describe yourself in one "lenny face"?',
             'origin': 'Where are you joining us from?',
             'description': 'Why are you excited about %s?' % settings.HACKATHON_NAME,
             'projects': 'What projects have you worked on?',
