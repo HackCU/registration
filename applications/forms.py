@@ -173,7 +173,7 @@ class ApplicationForm(OverwriteOnlyModelFormMixin, BetterModelForm):
               'description': 'Hey there, before we begin we would like to know a little more about you. '
                              '<b>Unfortunately, '
                              'due to University policy, we can only accept hackers 18+ years old.</b>', }),
-            ('Hackathons?', {'fields': ('description', 'first_timer', 'projects'), }),
+            ('Why HackCU?', {'fields': ('description', 'first_timer', 'projects'), }),
             ('Show us what you\'ve built',
              {'fields': ('github', 'devpost', 'linkedin', 'site', 'resume'),
               'description': 'Some of our sponsors may use this information for recruitment purposes, '
