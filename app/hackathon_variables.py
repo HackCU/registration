@@ -42,7 +42,7 @@ HACKATHON_ARRIVE = 'Registration opens at 8:00 AM and closes at 10:00 AM on Satu
 
 # (OPTIONAL) When to arrive at the hackathon
 HACKATHON_LEAVE = 'Closing ceremony will be held on Sunday, February 23rd from 3:00 PM to 4:00 PM. ' \
-                  'However, the projects demo fair will be held in the morning from 12:30 AM to 3 PM.'
+                  'However, the projects demo fair will be held in the afternoon from 12:30 PM to 3 PM.'
 # (OPTIONAL) Hackathon live page
 HACKATHON_LIVE_PAGE = 'https://live.hackcu.org'
 
