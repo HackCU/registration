@@ -1,8 +1,9 @@
 <br>
 <p align="center">
-    <img alt="HackCU" src="https://github.com/HackCU/splash-page/blob/master/img/hackcu_black.png" width="200"/>		
+  <img alt="HackCU IV" src="https://raw.githubusercontent.com/HackCU/HackCU/master/assets/images/hackcu2020logo.png" width="200"/>
 </p>
 <br>
+
 
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/dcf8e46541dbab5eb64f/maintainability)](https://codeclimate.com/github/HackAssistant/registration/maintainability)
